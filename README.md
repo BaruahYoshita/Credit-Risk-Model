@@ -4,7 +4,7 @@
 The objective of this project is to build and compare machine learning models to predict the probability that a loan applicant will default, using historical application and credit bureau data.
 
 This is a binary classification problem with:
-- Strong class imbalance (default is a rare event)
+- Strong class imbalance, since default is a rare event
 - High-dimensional tabular features
 - Missing values
 - Business need for both discrimination and probability calibration
@@ -12,11 +12,11 @@ This is a binary classification problem with:
 The output is a calibrated probability of default that can support downstream decision-making such as credit approval, risk-based pricing, and portfolio risk monitoring.
 
 ## 2. Dataset
-Source: Home Credit Default Risk dataset (Kaggle)
+Source: Home Credit Default Risk dataset from Kaggle
 
 Target variable:
-- TARGET = 1 → Client experienced payment difficulties (default)
-- TARGET = 0 → Client did not experience payment difficulties
+- TARGET = 1 → Defaulter
+- TARGET = 0 → Non defaulter
 
 The dataset contains:
 - Demographic information
@@ -33,11 +33,11 @@ Key challenges:
 ## 3. Modeling Approach
 Models to be implemented and compared:
 - Logistic Regression (interpretable baseline)
-- Random Forest (nonlinear ensemble)
-- XGBoost (gradient boosting for tabular data)
+- Random Forest 
+- XGBoost 
 
 ## 4. Evaluation Metrics
 - ROC-AUC
 - Precision–Recall AUC
 - KS Statistic
-- Probability calibration (Brier score, calibration curve)
+- Probability calibration -- Brier score, calibration curve
